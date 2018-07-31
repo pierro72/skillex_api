@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <property name="u1"     value="7"   dbms="mysql"/>
+    <property name="u2"     value="11"  dbms="mysql"/>
+    <property name="u3"     value="18"  dbms="mysql"/>
+    <property name="u4"     value="19"  dbms="mysql"/>
+    <property name="u5"     value="30"  dbms="mysql"/>
+    <property name="u6"     value="37"  dbms="mysql"/>
+
+
+    <!--  USER 1 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_acquise_1">
+        <comment>insert competence acquise fictive pour user 1</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @user = "${u1}";
+            INSERT INTO competence_acquise 	( note, collaborateur_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+    <!--  USER 2 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_acquise_2">
+        <comment>insert competence acquise fictive pour user 2</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @user = "${u2}";
+            INSERT INTO competence_acquise 	( note, collaborateur_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+    <!--  USER 3 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_acquise_3">
+        <comment>insert competence acquise fictive pour user 3</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @user = "${u3}";
+            INSERT INTO competence_acquise 	( note, collaborateur_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+    <!--  USER 4 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_acquise_4">
+        <comment>insert competence acquise fictive pour user 4</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @user = "${u4}";
+            INSERT INTO competence_acquise 	( note, collaborateur_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+    <!--  USER 5 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_acquise_5">
+        <comment>insert competence acquise fictive pour user 5</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @user = "${u5}";
+            INSERT INTO competence_acquise 	( note, collaborateur_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+    <!--  USER 6 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_acquise_6">
+        <comment>insert competence acquise fictive pour user 6</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @user = "${u6}";
+            INSERT INTO competence_acquise 	( note, collaborateur_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @user , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <property name="t1"     value="3"   dbms="mysql"/>
+    <property name="t2"     value="6"  dbms="mysql"/>
+    <property name="t3"     value="7"  dbms="mysql"/>
+
+
+
+    <!--  TEAM 1 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_requise_1">
+        <comment>insert competence requise fictive pour team 1</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @team = "${t1}";
+            INSERT INTO competence_requise 	( note, equipe_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+    <!--  TEAM 2 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_requise_2">
+        <comment>insert competence requise fictive pour team 2</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @team = "${t2}";
+            INSERT INTO competence_requise 	( note, equipe_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+    <!--  TEAM 3 -->
+    <changeSet author="pycoignard (generated)" id="insert_fictive_requise_3">
+        <comment>insert competence requise fictive pour team 2</comment>
+        <sql dbms="mysql" splitStatements="true" stripComments="true">
+            SET @team = "${t3}";
+            INSERT INTO competence_requise 	( note, equipe_id, competence_id)
+            VALUES
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 ),
+            ( FLOOR(RAND() * 4)+1 , @team , FLOOR(RAND() * 209)+1 );
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

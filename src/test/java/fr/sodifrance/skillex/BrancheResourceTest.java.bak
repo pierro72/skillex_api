@@ -1,0 +1,32 @@
+package fr.sodifrance.skillex;
+
+import org.junit.Test;
+import org.springframework.test.web.servlet.ResultActions;
+
+import static org.hamcrest.Matchers.equalTo;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+
+
+public class BrancheResourceTest  extends AbstractMvcTest{
+
+
+
+    @Override
+    protected void doInit() throws Exception {
+        /*        registerUser("user", "user@gmail.com", "user", "user").andExpect(status().isCreated());*/
+    }
+
+
+    @Test
+    public void getAllBranches_OK() throws Exception {
+        getAllBranches()
+                .andExpect(status().is(equalTo(200)));
+    }
+
+
+    private ResultActions getAllBranches () throws Exception {
+        return mockMvc.perform(get( BRANCHE_URL));
+    }
+}

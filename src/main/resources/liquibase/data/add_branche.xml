@@ -1,0 +1,272 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.3.xsd">
+
+    <property name="b1" value="1" dbms="mysql"/>
+    <property name="b2" value="2" dbms="mysql"/>
+    <property name="b3" value="3" dbms="mysql"/>
+    <property name="b4" value="4" dbms="mysql"/>
+    <property name="b5" value="5" dbms="mysql"/>
+    <property name="b6" value="6" dbms="mysql"/>
+    <property name="b11" value="11" dbms="mysql"/>
+    <property name="b18" value="18" dbms="mysql"/>
+    <property name="b19" value="19" dbms="mysql"/>
+    <property name="b23" value="23" dbms="mysql"/>
+
+    <!--  branche - B1  -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_1">
+        <insert tableName="branche">
+            <column name="libelle"              value="Compétences métiers"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche B1 /metier -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_2">
+        <!--  B2 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b1}" />
+            <column name="nom"                              value="Gestion de projets"/>
+            <column name="libelle"                          value="Gestion de projets"/>
+            <column name="description"                      value="Branche Métier : Gestion des projets"/>
+        </insert>
+        <!--  B3 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               valueComputed="${b1}"/>
+            <column name="nom"                              value="Développement"/>
+            <column name="libelle"                          value="Développement"/>
+            <column name="description"                      value="Branche métier : Développement"/>
+        </insert>
+        <!--  B4 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               valueComputed="${b1}"/>
+            <column name="nom"                              value="Infrastucture"/>
+            <column name="libelle"                          value="Infrastucture"/>
+            <column name="description"                      value="Branche Métier : Infrastucture"/>
+        </insert>
+        <!--  B5 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               valueComputed="${b1}"/>
+            <column name="nom"                              value="Conseil / AMOA"/>
+            <column name="libelle"                          value="Conseil / AMOA"/>
+            <column name="description"                      value="Branche Métier : Conseil / AMOA"/>
+        </insert>
+        <!--  B6 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               valueComputed="${b1}"/>
+            <column name="nom"                              value="Validation"/>
+            <column name="libelle"                          value="Validation"/>
+            <column name="description"                      value="Branche Métier : Validation"/>
+        </insert>
+        <!--  B7 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               valueComputed="${b1}"/>
+            <column name="nom"                              value="Certification"/>
+            <column name="libelle"                          value="Certification"/>
+            <column name="description"                      value="Branche Métier : Certification"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche B2 /metier / gestion de projet -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_3">
+        <!--  B8 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b2}" />
+            <column name="nom"                              value="Méthodologie"/>
+            <column name="libelle"                          value="Méthodologie"/>
+            <column name="description"                      value="Branche Métier : Gestion des projets > Méthodologie"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche B3 /metier / Développement -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_4">
+        <!--  B9 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b3}" />
+            <column name="nom"                              value="Langages"/>
+            <column name="libelle"                          value="Langages"/>
+            <column name="description"                      value="Branche Métier : Développement > Langages"/>
+        </insert>
+        <!--  B10 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b3}" />
+            <column name="nom"                              value="Framework et Bibliothèque"/>
+            <column name="libelle"                          value="Framework et Bibliothèque"/>
+            <column name="description"                      value="Branche Métier : Développement > Framework et Bibliothèque"/>
+        </insert>
+        <!--  B11 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b3}" />
+            <column name="nom"                              value="Modélisation"/>
+            <column name="libelle"                          value="Modélisation"/>
+            <column name="description"                      value="Branche Métier : Développement > Modélisation"/>
+        </insert>
+        <!--  B12 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b3}" />
+            <column name="nom"                              value="Intégration continue"/>
+            <column name="libelle"                          value="Intégration continue"/>
+            <column name="description"                      value="Branche Métier : Développement > Intégration continue"/>
+        </insert>
+        <!--  B13 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b3}" />
+            <column name="nom"                              value="Versionning"/>
+            <column name="libelle"                          value="Versionning"/>
+            <column name="description"                      value="Branche Métier : Développement > Versionning"/>
+        </insert>
+        <!--  B14 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b3}" />
+            <column name="nom"                              value="Environnement de développement"/>
+            <column name="libelle"                          value="Environnement de développement"/>
+            <column name="description"                      value="Branche Métier : Développement > Environnement de développement"/>
+        </insert>
+        <!--  B15 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b3}" />
+            <column name="nom"                              value="Outils"/>
+            <column name="libelle"                          value="Outils"/>
+            <column name="description"                      value="Branche Métier : Développement > Outils"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche - B4 /metier / Infrastucture -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_5">
+        <!--  B16 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b4}" />
+            <column name="nom"                              value="Serveurs d'applications"/>
+            <column name="libelle"                          value="Serveurs d'applications"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > Serveurs d'applications"/>
+        </insert>
+        <!--  B17 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b4}" />
+            <column name="nom"                              value="SGDB"/>
+            <column name="libelle"                          value="SGDB"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > SGDB"/>
+        </insert>
+        <!--  B18 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b4}" />
+            <column name="nom"                              value="Système d'exploitation"/>
+            <column name="libelle"                          value="Système d'exploitation"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > Système d'exploitation"/>
+        </insert>
+        <!--  B19 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b4}" />
+            <column name="nom"                              value="Réseau"/>
+            <column name="libelle"                          value="Réseau"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > Réseau"/>
+        </insert>
+        <!--  B20 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b4}" />
+            <column name="nom"                              value="Outils"/>
+            <column name="libelle"                          value="Outils"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > Outils"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche - B5 /metier / Conseil / AMOA -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_6">
+        <!--  B21 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b5}" />
+            <column name="nom"                              value="Livrables"/>
+            <column name="libelle"                          value="Livrables"/>
+            <column name="description"                      value="Branche Métier : Conseil / AMOA > Livrables"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche - B6 /metier / Conseil / Validation -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_7">
+        <!--  B22 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b6}" />
+            <column name="nom"                              value="Livrables"/>
+            <column name="libelle"                          value="Livrables"/>
+            <column name="description"                      value="Branche Métier : Validation > Livrables"/>
+        </insert>
+        <!--  B23 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b6}" />
+            <column name="nom"                              value="Outils"/>
+            <column name="libelle"                          value="Outils"/>
+            <column name="description"                      value="Branche Métier : Validation > Outils"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche - B11 /metier / developpeemnt / modelisation -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_8">
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b11}" />
+            <column name="nom"                              value="Méthodologie"/>
+            <column name="libelle"                          value="Méthodologie"/>
+            <column name="description"                      value="Branche Métier : Développement > Modélisation > Méthodologie"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche - B18 /metier / Infrastructure / Système d'exploitation -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_9">
+        <!--  B24 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b18}" />
+            <column name="nom"                              value="Serveur"/>
+            <column name="libelle"                          value="Serveur"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > Système d'exploitation > Serveur"/>
+        </insert>
+        <!--  B25 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b18}" />
+            <column name="nom"                              value="Poste de travail"/>
+            <column name="libelle"                          value="Poste de travail"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > Système d'exploitation > Poste de travail"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche - B19 /metier / infrastructure / reseau -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_10">
+        <!--  B26 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b19}" />
+            <column name="nom"                              value="Protocoles"/>
+            <column name="libelle"                          value="Protocoles"/>
+            <column name="description"                      value="Branche Métier : Infrastucture > Réseau > Protocoles"/>
+        </insert>
+    </changeSet>
+
+    <!--  Sous branche - B23 /metier / validateion / outils -->
+    <changeSet author="pycoignard (generated)" id="insert_branche_11">
+        <!--  B27 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b23}" />
+            <column name="nom"                              value="BugTrackers"/>
+            <column name="libelle"                          value="BugTrackers"/>
+            <column name="description"                      value="Branche Métier : Validation > Outils > BugTrackers"/>
+        </insert>
+        <!--  B28 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b23}" />
+            <column name="nom"                              value="Tests unitaires"/>
+            <column name="libelle"                          value="Tests unitaires"/>
+            <column name="description"                      value="Branche Métier : Validation > Outils > Tests unitaires"/>
+        </insert>
+        <!--  B29 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b23}" />
+            <column name="nom"                              value="Tests d'intégration / Homologation technique"/>
+            <column name="libelle"                          value="Tests d'intégration / Homologation technique"/>
+            <column name="description"                      value="Branche Métier : Validation > Outils > Tests d'intégration / Homologation technique"/>
+        </insert>
+        <!--  B30 -->
+        <insert tableName="branche">
+            <column name="branche_parente_id"               value="${b23}" />
+            <column name="nom"                              value="Management des tests"/>
+            <column name="libelle"                          value="Management des tests"/>
+            <column name="description"                      value="Branche Métier : Validation > Outils > Management des tests"/>
+        </insert>
+    </changeSet>
+
+
+</databaseChangeLog>
